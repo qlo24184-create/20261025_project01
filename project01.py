@@ -37,7 +37,7 @@ def load_data()->pd.DataFrame:
 
 
 def format_money(value:float)->str:
-    return f"NT${value:,.2f}" #將小數格式化成文字輸出
+    return f"NT${value:,.0f}" #將小數格式化成文字輸出
 
 
 def main()->None: #主執行區
