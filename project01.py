@@ -3,7 +3,7 @@ import streamlit as st
 from pathlib import Path
 
 
-DATA_DIR = Path(__file__).parent/'data'/'raw'
+DATA_DIR = Path(__file__).parent
 
 
 @st.cache_data
