@@ -82,7 +82,7 @@ def main()->None: #主執行區
     customer_count=filtered['customer_id'].nunique()
     aver_order=total_revnenue/order_count
 
-    a,b,c,d=st.columns[(1.5,1,1,1.5)] 
+    a,b,c,d=st.columns[(5)] 
     a.metric('總營收',format_money(total_revnenue))
     b.metric('訂單總數',f"{order_count:}")
     c.metric('總客量',f"{customer_count:,}")
