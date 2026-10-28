@@ -37,7 +37,7 @@ def load_data()->pd.DataFrame:
 
 
 def format_money(value:float)->str:
-    return f"NT${value:,.0f}" #將小數格式化成文字輸出
+    return f"NT${value:,.2f}" #將小數格式化成文字輸出
 
 
 def main()->None: #主執行區
@@ -82,7 +82,7 @@ def main()->None: #主執行區
     customer_count=filtered['customer_id'].nunique()
     aver_order=total_revnenue/order_count
 
-    a,b,c,d=st.columns(4) 
+    a,b,c,d=st.columns(1.5,1,1,1.5) 
     a.metric('總營收',format_money(total_revnenue))
     b.metric('訂單總數',f"{order_count:}")
     c.metric('總客量',f"{customer_count:,}")
