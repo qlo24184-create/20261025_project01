@@ -84,9 +84,11 @@ def main()->None: #主執行區
     aver_order = total_revenue / order_count
 
 
-    a,b,c,d = st.columns(4)
+    a,b= st.columns(2)
     a.metric("總營收",format_money(total_revenue))
     b.metric("訂單總數",f"{order_count:,}")
+
+    c,d = st.columns(2)
     c.metric("總客量",f"{customer_count:,}")
     d.metric("平均訂單金額",format_money(aver_order))
 
